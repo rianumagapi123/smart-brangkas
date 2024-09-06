@@ -156,14 +156,13 @@ void loop() {
           RFIDMode = true;
         }
 
-        input_password = ""; // reset the input password
-      }
+        input_password = ""; 
       else {
         if (input_password.length() == 0) {
         }
-        input_password += key; // append new character to input password string
-        lcd.setCursor(input_password.length(), 3); // move cursor to new position
-        lcd.print('*');                 // print * key as hiden character
+        input_password += key; 
+        lcd.setCursor(input_password.length(), 3); 
+        lcd.print('*');                 
       }
     }
     if (!mfrc522.PICC_IsNewCardPresent()) {
